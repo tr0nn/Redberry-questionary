@@ -1,0 +1,142 @@
+body {
+  margin: 0px;
+}
+@font-face {
+  font-family: 'Rowdies';
+  src: url(../fonts/Rowdies-Regular.ttf);
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+  background: url(/assets/images/calendar.png) no-repeat;
+  width: 20px;
+  height: 20px;
+  padding-right: 15px;
+}
+
+.left-side {
+  background-color: white;
+  width: 913px;
+  height: 1080px;
+  float: left;
+}
+.left-side h1 {
+  font-family: 'Rowdies';
+  color: #fe3b1f;
+  font-size: 64px;
+  margin-left: 105px;
+  margin-top: 131px;
+  padding-right: 105px;
+}
+.left-side .left-side-input {
+  margin-left: 235px;
+  width: 455px;
+  height: 54px;
+  margin-bottom: 37px;
+}
+#pers-info-first-child {
+  margin-top: 131px;
+}
+::placeholder {
+  padding-left: 57px;
+  font-family: 'Montserrat';
+}
+.page-pagination {
+  display: flex;
+  width: 170px;
+  margin-left: 347px;
+  margin-top: 125px;
+}
+.page-pagination a {
+  margin-right: 12px;
+}
+.right-side h1 {
+  font-family: 'Rowdies';
+  color: #fe3b1f;
+  margin-top: 112px;
+  margin-left: 177px;
+  font-size: 64px;
+}
+.right-side {
+  width: 1007px;
+  height: 1080px;
+  float: right;
+  background: url(/assets/images/stars.png);
+  background-color: black;
+}
+.right-side p {
+  color: white;
+  font-family: 'Montserrat';
+  margin-left: 180px;
+  margin-right: 122px;
+  margin-top: 130px;
+  font-size: 24px;
+  line-height: 200%;
+  letter-spacing: 0.05em;
+}
+
+.radio-input {
+  margin-left: 166px;
+  margin-right: 102px;
+}
+.radio-input p {
+  font-family: 'Montserrat';
+  font-size: 18px;
+}
+.radio-input label {
+  font-family: 'Montserrat';
+  font-size: 14px;
+}
+.radio-input .input-date {
+  width: 455px;
+  height: 54px;
+}
+#devTalk-about {
+  width: 535px;
+  height: 122px;
+}
+.radio-input input::placeholder {
+  padding-left: 20px;
+  width: 70px;
+}
+#whenContactCov {
+  display: none;
+}
+#cov-vaccine {
+  display: none;
+}
+#speak-about-Devtalk {
+  display: none;
+}
+#skills-option {
+  margin-left: 235px;
+  width: 462px;
+  height: 54px;
+  margin-bottom: 37px;
+  border: 1px solid #525557;
+}
+.prog-language-btn {
+  background-color: red;
+  width: 201px;
+  height: 32px;
+  margin-left: 454px;
+}
+#addProgLang-Skills-ul li {
+  list-style-type: none;
+  border: 1px solid #525557;
+  width: 447px;
+  height: 48px;
+  margin-left: 195px;
+  margin-top: 17px;
+  font-family: 'Montserrat';
+}
+.persInfoValidation {
+  color: #fe3b1f;
+  font-family: 'Montserrat';
+  margin-left: 290px;
+  font-size: 11px;
+  margin-top: -20px;
+  width: 409px;
+}

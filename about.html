@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="bakar nemsicveridze">
+    <link rel="stylesheet" href="./assets/css/personal-info-pages.css">
+    <script src="./assets/scripts/about.js" defer></script>
+    <title>Personal Info</title>
+</head>
+
+<body>
+    <div class="left-side">
+        <h1>What about you?</h1>
+        <form class="peronal-info">
+            <div>
+                <div class="radio-input">
+                    <p>Would you attend Devtalks and maybe also organize your own?</p>
+
+                    <input onclick="speakDevtalk('yes')" type="radio" name="DevTalks" value="yes">
+                    <label for="yes">Yes</label><br> <br>
+                    <input onclick="speakDevtalk('no')" type="radio" name="DevTalks" value="yes">
+                    <label for="yes">No</label><br> 
+                </div> <br> <br>
+                <div id="speak-about-Devtalk" class="radio-input">
+                    <p>What would you speak about at Devtalk?</p>
+                    <input id="devTalk-about" type="text" name="Aboutdevtalk" placeholder="I would..">
+                </div> <br><br>
+                <div class="radio-input">
+                    <p>Tell us something special</p>
+                    <input id="devTalk-about" type="text" name="Aboutdevtalk" placeholder="I ..">
+                </div>
+            </div>
+            
+            <!--page pagination-->
+            <div class="page-pagination">
+                <a href="./index.html"><img src="./assets/images/Previous.png"></a>
+                <a href="./persInformation.html"> <img src="./assets/images/Ellipse 1.png"></a>
+                <a href="./skills.html"><img src="./assets/images/Ellipse 1.png"></a>
+                <a href="./covid.html"><img src="./assets/images/Ellipse 1.png"></a>
+                <a href="./about.html"><img src="./assets/images/Ellipse 1.png"></a>
+                <a href="./sumbit.html"><img src="./assets/images/Ellipse 2.png"></a>
+                <a href="./sumbit.html"><img src="./assets/images/Next.png"></a>
+            </div>
+        </form>
+    </div>
+    <div class="right-side">
+        <h1>Redberrian Insights</h1>
+        <p>
+            We were soo much fun before the pandemic started! Parties almost every
+             weekend and lavish employee birthday celebrations! Unfortunately, covid
+              ruined that fun like it did almost everything else in the world. But we 
+              try our best to zhuzh it up a bit. For example, we host biweekly Devtalks 
+              where our senior and lead developers talk about topics they are passionate
+               about. Previous topics have included Web3, NFT, Laravel 9, Kubernetes,
+                etc. We hold these talks in the office but you can join our Zoom broadcast 
+                as well. Feel free to join either as an attendee or a speaker!
+        </p>
+
+    </div>
+</body>
+
+</html>
