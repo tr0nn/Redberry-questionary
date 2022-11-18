@@ -93,7 +93,7 @@ input[type='date']::-webkit-calendar-picker-indicator {
   width: 455px;
   height: 54px;
 }
-#devTalk-about {
+.devTalk-about {
   width: 535px;
   height: 122px;
 }
@@ -139,4 +139,22 @@ input[type='date']::-webkit-calendar-picker-indicator {
   font-size: 11px;
   margin-top: -20px;
   width: 409px;
+}
+.covidValidation {
+  color: #fe3b1f;
+  font-family: 'Montserrat';
+  margin-left: 50px;
+  font-size: 11px;
+}
+.aboutValidation {
+  color: #fe3b1f;
+  font-family: 'Montserrat';
+  margin-left: 120px;
+  font-size: 11px;
+}
+.skillValidation {
+  color: #fe3b1f;
+  font-family: 'Montserrat';
+  margin-left: 300px;
+  font-size: 11px;
 }

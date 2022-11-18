@@ -15,21 +15,21 @@
     <div class="left-side">
         <h1>Covid Stuff</h1>
 
-        <form class="peronal-info">
+        <div class="peronal-info">
             <div>
                 <div class="radio-input">
                     <p>how would you prefer to work</p> 
 
-                    <input type="radio" name="workLocation" value="office">
+                    <input type="radio" name="workLocation" value="From Sairme Office">
                     <label for="office">From Sairme Office</label><br> 
 
-                    <input type="radio" name="workLocation" value="Home">
+                    <input type="radio" name="workLocation" value="From Home">
                     <label for="Home">From Home</label><br>
 
-                    <input type="radio" name="workLocation" value="hybrid">
+                    <input type="radio" name="workLocation" value="Hybrid">
                     <label for="hybrid">Hybrid</label>
 
-                    <div class="validation"></div> <br>
+                    <p class="covidValidation" id="workValidation"></p> <br>
                 </div>
                 <div class="radio-input"> 
                     <p>Did you contact covid 19? :(</p> 
@@ -40,11 +40,12 @@
                     <input onclick="covid19Contact('no')" type="radio" name="contactCov" value="no">
                     <label for="no">No</label><br>
 
-                    <div class="validation"></div> <br> <br>
+                    <p class="covidValidation" id="cov19Validation"></p> <br> <br>
                 </div>
                 <div id="whenContactCov" class="radio-input">
                     <p>When?</p> <br>
-                    <input class="input-date" type="date" name="covidContact" value="date" >
+                    <input id="covid19DateId" class="input-date" type="date" name="covidContact" value="date" >
+                    <p class="covidValidation" id="cov19DateValidation"></p>
                 </div> <br>
                 <div class="radio-input">
                     <p>Have you been vaccinated?</p>
@@ -54,10 +55,13 @@
 
                     <input onclick="covid19Vaccinated('no')" type="radio" name="vaccineCov" value="no">
                     <label for="no">No</label><br> 
+
+                    <p class="covidValidation" id="vaccineValidation"></p>
                 </div>
                 <div id="cov-vaccine" class="radio-input">
                     <p>When did you get your last covid vaccine?</p> <br>
-                    <input class="input-date" type="date" name="covidVaccine" value="date">
+                    <input id="vaccineDateId" class="input-date" type="date" name="covidVaccine" value="date">
+                    <p class="covidValidation" id="vaccineDateValidation"></p>
                 </div>
             </div>
 
@@ -69,9 +73,9 @@
                 <a href="./covid.html"><img src="./assets/images/Ellipse 1.png"></a>
                 <a href="./about.html"><img src="./assets/images/Ellipse 2.png"></a>
                 <a href="./sumbit.html"><img src="./assets/images/Ellipse 2.png"></a>
-                <a href="./about.html"><img src="./assets/images/Next.png"></a>
+                <button id="workFormBtn" ><img src="./assets/images/Next.png"></button>
             </div>
-        </form>
+        </div>
     </div>
     <div class="right-side">
         <h1>Redberry Covid Policies</h1>

@@ -14,23 +14,27 @@
 <body>
     <div class="left-side">
         <h1>What about you?</h1>
-        <form class="peronal-info">
+        <div class="peronal-info">
             <div>
                 <div class="radio-input">
                     <p>Would you attend Devtalks and maybe also organize your own?</p>
 
                     <input onclick="speakDevtalk('yes')" type="radio" name="DevTalks" value="yes">
                     <label for="yes">Yes</label><br> <br>
-                    <input onclick="speakDevtalk('no')" type="radio" name="DevTalks" value="yes">
+                    <input onclick="speakDevtalk('no')" type="radio" name="DevTalks" value="no">
                     <label for="yes">No</label><br> 
+                    
+                    <p class="aboutValidation" id="DevTalkValidation"></p>
                 </div> <br> <br>
                 <div id="speak-about-Devtalk" class="radio-input">
                     <p>What would you speak about at Devtalk?</p>
-                    <input id="devTalk-about" type="text" name="Aboutdevtalk" placeholder="I would..">
+                    <input id="devTalk-about" class="devTalk-about" type="text" name="Aboutdevtalk" placeholder="I would..">
+                    <p class="aboutValidation" id="speakDevTalkId"></p>
                 </div> <br><br>
                 <div class="radio-input">
                     <p>Tell us something special</p>
-                    <input id="devTalk-about" type="text" name="Aboutdevtalk" placeholder="I ..">
+                    <input id="someSpecialId" class="devTalk-about" type="text" name="Aboutdevtalk" placeholder="I ..">
+                    <p class="aboutValidation" id="specialValidation"></p>
                 </div>
             </div>
             
@@ -42,9 +46,9 @@
                 <a href="./covid.html"><img src="./assets/images/Ellipse 1.png"></a>
                 <a href="./about.html"><img src="./assets/images/Ellipse 1.png"></a>
                 <a href="./sumbit.html"><img src="./assets/images/Ellipse 2.png"></a>
-                <a href="./sumbit.html"><img src="./assets/images/Next.png"></a>
+                <button id="aboutFormBtn" ><img src="./assets/images/Next.png"></button>
             </div>
-        </form>
+        </div>
     </div>
     <div class="right-side">
         <h1>Redberrian Insights</h1>

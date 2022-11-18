@@ -3,12 +3,12 @@ let firsNameVal, lastNameVal, emailVal, phoneVal;
 let persInfoSesion = true;
 
 function validateEmail(emial) {
-  var re = /\S+@\S+\.\S+/;
+  const re = /\S+@\S+\.\S+/;
   return re.test(emial);
 }
 
 function validatePhone(phone) {
-  var re = /[+][9]{2}[5]{2}[0-9]{8}$/g;
+  const re = /[+][9]{2}[5]{2}[0-9]{8}$/g;
   return re.test(phone);
 }
 
@@ -63,6 +63,7 @@ function persInfoValidation() {
     validateEmail(emailEl)
   ) {
     alert('aq daiwereba danarcheni kodi' + persInfoSesion);
+    localStorage.setItem('lastname', firstNameEl);
+    console.log(localStorage.getItem('lastname'));
   }
-  //alert(validatePhone(phoneEl));
 }
