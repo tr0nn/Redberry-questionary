@@ -71,6 +71,11 @@ workBtn.addEventListener('click', () => {
     cov19DateTime &&
     vaccineCovDateTime
   ) {
-    alert('ai aq ki martla iwerebashemdegi kodi');
+    localStorage.setItem('work_preference', selectedWork);
+    localStorage.setItem('had_covid', selectedCov19);
+    localStorage.setItem('had_covid_at', cov19DateTime);
+    localStorage.setItem('vaccinated', selectedVaccine);
+    localStorage.setItem('vaccinated_at', vaccineCovDateTime);
+    window.open('about.html', '_self');
   }
 });

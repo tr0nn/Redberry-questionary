@@ -1,5 +1,7 @@
 let html = (css = php = laravel = react = vue = svelte = angular = true);
 
+let skillObj = [];
+
 async function fetchText() {
   let response = await fetch('https://bootcamp-2022.devtest.ge/api/skills');
   let data = await response.json();
@@ -97,6 +99,24 @@ function addProgLang() {
     );
     angular = false;
   }
-  //aqedan grdzeldeba
-  console.log(document.getElementById('addProgLang-Skills-ul'));
+}
+
+function skillSubmitForm() {
+  let skillList = document
+    .getElementById('addProgLang-Skills-ul')
+    .getElementsByTagName('li');
+
+  if (skillList.length < 1) {
+    alert('choose ');
+  } else {
+    for (let i = 0; i < skillList.length; ++i) {
+      let lastString = skillList[i].innerText.slice(-2);
+      let obj = { id: skillList[i].id, experience: lastString };
+      skillObj.push(obj);
+      let skillObJson = JSON.stringify(skillObj);
+      localStorage.setItem('skillobj', skillObJson);
+      window.open('covid.html', '_self');
+    }
+  }
+  //console.log(skillObj);
 }

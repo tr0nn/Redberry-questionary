@@ -4,6 +4,7 @@ let selectDevTalks;
 let speakDevTalks;
 
 let someSpecial;
+
 function speakDevtalk(ans) {
   if (ans == 'yes') {
     document.getElementById('speak-about-Devtalk').style.display = 'block';
@@ -32,6 +33,9 @@ aboutBtn.addEventListener('click', () => {
   selectDevTalks == 'no' ? (speakDevTalks = true) : null;
 
   if (selectDevTalks && speakDevTalks && someSpecial) {
-    alert('gamosula dzmao');
+    localStorage.setItem('will_organize_devtalk', selectDevTalks);
+    localStorage.setItem('devtalk_topic', speakDevTalks);
+    localStorage.setItem('something_special', someSpecial);
+    window.open('submit.html', '_self');
   }
 });

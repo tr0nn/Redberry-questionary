@@ -62,8 +62,10 @@ function persInfoValidation() {
     lastNameEl.length > 3 &&
     validateEmail(emailEl)
   ) {
-    alert('aq daiwereba danarcheni kodi' + persInfoSesion);
-    localStorage.setItem('lastname', firstNameEl);
-    console.log(localStorage.getItem('lastname'));
+    localStorage.setItem('firstName', firstNameEl);
+    localStorage.setItem('lastName', lastNameEl);
+    localStorage.setItem('email', emailEl);
+    localStorage.setItem('phone', phoneEl);
+    window.open('skills.html', '_self');
   }
 }
