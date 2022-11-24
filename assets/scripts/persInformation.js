@@ -51,7 +51,7 @@ function persInfoValidation() {
     persInfoSesionFunc('true');
   }
   if (!validatePhone(phoneEl)) {
-    phoneVal.innerHTML = '* phone format is not correct';
+    //phoneVal.innerHTML = '* phone format is not correct';
   } else {
     phoneVal.innerHTML = '';
   }
