@@ -72,9 +72,23 @@ workBtn.addEventListener('click', () => {
     vaccineCovDateTime
   ) {
     localStorage.setItem('work_preference', selectedWork);
-    localStorage.setItem('had_covid', selectedCov19);
+
+    if (selectedCov19 == 'yes') {
+      selectedCov19 = true;
+      localStorage.setItem('had_covid', selectedCov19);
+    } else {
+      selectedCov19 = false;
+      localStorage.setItem('had_covid', selectedCov19);
+    }
+
+    if (selectedVaccine == 'yes') {
+      selectedVaccine = true;
+      localStorage.setItem('vaccinated', selectedVaccine);
+    } else {
+      selectedVaccine = false;
+      localStorage.setItem('vaccinated', selectedVaccine);
+    }
     localStorage.setItem('had_covid_at', cov19DateTime);
-    localStorage.setItem('vaccinated', selectedVaccine);
     localStorage.setItem('vaccinated_at', vaccineCovDateTime);
     window.open('about.html', '_self');
   }

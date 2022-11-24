@@ -33,7 +33,13 @@ aboutBtn.addEventListener('click', () => {
   selectDevTalks == 'no' ? (speakDevTalks = true) : null;
 
   if (selectDevTalks && speakDevTalks && someSpecial) {
-    localStorage.setItem('will_organize_devtalk', selectDevTalks);
+    if (selectDevTalks == 'yes') {
+      selectDevTalks = true;
+      localStorage.setItem('will_organize_devtalk', selectDevTalks);
+    } else {
+      selectDevTalks = false;
+      localStorage.setItem('will_organize_devtalk', selectDevTalks);
+    }
     localStorage.setItem('devtalk_topic', speakDevTalks);
     localStorage.setItem('something_special', someSpecial);
     window.open('submit.html', '_self');
