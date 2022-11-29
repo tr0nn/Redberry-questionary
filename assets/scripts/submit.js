@@ -1,4 +1,4 @@
-localStorage.setItem('token', 'c734315e-87b5-40d8-882e-6f9e4811c591');
+localStorage.setItem('token', 'ec778c57-0d34-47fb-add7-11dbdf357253');
 
 let tokenLS = localStorage.getItem('token');
 let firstNameLS = localStorage.getItem('firstName');
@@ -31,7 +31,7 @@ function submitForm() {
       last_name: lastNameLS,
       email: emailLS,
       phone: phoneLs,
-      skill: skillObjLS,
+      skill: JSON.parse(skillObjLS),
       work_preference: workPreferLS,
       had_covid: contactCov19LS === 'true',
       had_covid_at: covidDateLS === 'true' ? '1111-11-11' : covidDateLS,
@@ -48,8 +48,8 @@ function submitForm() {
         alert('submitted');
         console.log(data);
 
-        // window.localStorage.clear();
-        // window.location.href = './thanks.html';
+        window.localStorage.clear();
+        window.location.href = './thanks.html';
       }
     })
     .catch(error => {

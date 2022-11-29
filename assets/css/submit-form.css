@@ -1,0 +1,59 @@
+#submitted-div > div {
+  background-color: #f05039;
+  width: 1154px;
+  height: 52px;
+  margin-bottom: 21px;
+}
+#submitted-div {
+  width: 1228px;
+  margin-left: 343px;
+}
+#submited-appH1 {
+  color: white;
+  font-family: 'Rowdies';
+  font-size: 56px;
+  letter-spacing: 0.11em;
+}
+
+#submitted-div > div > button {
+  border: none;
+  background: none;
+  opacity: 0.9;
+  margin-top: 15px;
+  margin-left: 1100px;
+}
+.unicalClassDiv {
+  background-color: white;
+  list-style-type: none;
+  height: 900px;
+  width: 1152px;
+  margin-top: -22px;
+  margin-bottom: 30px;
+  border: 1px solid #fe3b1f;
+}
+.left-info {
+  float: left;
+  width: 50%;
+}
+.left-info div {
+  margin-left: 70px;
+}
+.right-info {
+  display: flex;
+  width: 50%;
+  float: right;
+}
+.redFormHeader {
+  color: #fe3b1f;
+  text-decoration: underline;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 22px;
+}
+.blackHead {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}

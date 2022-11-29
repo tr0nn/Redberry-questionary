@@ -111,7 +111,10 @@ function skillSubmitForm() {
   } else {
     for (let i = 0; i < skillList.length; ++i) {
       let lastString = skillList[i].innerText.slice(-2);
-      let obj = { id: skillList[i].id, experience: lastString };
+      let obj = {
+        id: parseInt(skillList[i].id.slice(-1)),
+        experience: parseInt(lastString)
+      };
       skillObj.push(obj);
       let skillObJson = JSON.stringify(skillObj);
       localStorage.setItem('skillobj', skillObJson);
