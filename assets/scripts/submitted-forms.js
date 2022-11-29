@@ -1,4 +1,4 @@
-localStorage.setItem('token', 'ec778c57-0d34-47fb-add7-11dbdf357253');
+localStorage.setItem('token', '9159d670-97b6-4c18-a382-4c607c7a7096');
 let infoLineId = 1;
 let mainDiv = document.getElementById('submitted-div');
 let deleteEl = 2;
@@ -30,88 +30,91 @@ fetch(
       //addEventListener
       let infoEl = document.getElementById('infoBtnId-' + infoLineId);
       infoEl.addEventListener('click', () => {
-        if (deleteEl % 2 == 1) {
-          alert('delete');
-          document.getElementById('deleteFormLi').remove();
-          console.log(document.getElementById('deleteFormLi'));
-        }
-        //console.log(infoEl.parentNode.nextSibling);
-        deleteEl = deleteEl + 1;
+        if (deleteEl % 2 == 0) {
+          infoImg.src = './assets/images/VectorDown.png';
 
-        infoImg.src = './assets/images/VectorDown.png';
+          let unicalEl = infoEl.id.slice(-1);
 
-        let unicalEl = infoEl.id.slice(-1);
+          let unicalDiv = document.getElementById(infoEl.id).parentElement;
 
-        let unicalDiv = document.getElementById(infoEl.id).parentElement;
+          let preferToWorkOffice;
+          let preferToWorkHome;
+          let preferToWorkHybrid;
+          let covid19No;
+          let covid19Yes;
+          let haveCov19Form;
+          let vaccinatedNo;
+          let vaccinatedYes;
+          let cov19VaccineForm;
+          let devtalkNo;
+          let devtalkYes;
+          let speakDevtalkForm;
+          let someSpecialForm = data[unicalEl].something_special;
 
-        let preferToWorkOffice;
-        let preferToWorkHome;
-        let preferToWorkHybrid;
-        let covid19No;
-        let covid19Yes;
-        let haveCov19Form;
-        let vaccinatedNo;
-        let vaccinatedYes;
-        let cov19VaccineForm;
-        let devtalkNo;
-        let devtalkYes;
-        let speakDevtalkForm;
-        if (data[unicalEl].work_preference == 'from_office') {
-          preferToWorkOffice = 'checked';
-        }
-        if (data[unicalEl].work_preference == 'from_home') {
-          preferToWorkHome = 'checked';
-        }
-        if (data[unicalEl].work_preference == 'hybrid') {
-          preferToWorkHybrid = 'checked';
-        }
+          if (data[unicalEl].work_preference == 'from_office') {
+            preferToWorkOffice = 'checked';
+          }
+          if (data[unicalEl].work_preference == 'from_home') {
+            preferToWorkHome = 'checked';
+          }
+          if (data[unicalEl].work_preference == 'hybrid') {
+            preferToWorkHybrid = 'checked';
+          }
 
-        if (data[unicalEl].had_covid == false) {
-          covid19No = 'checked';
-        }
-        if (data[unicalEl].had_covid == true) {
-          covid19Yes = 'checked';
-          haveCov19Form = `
+          if (data[unicalEl].had_covid == false) {
+            covid19No = 'checked';
+          }
+          if (data[unicalEl].had_covid == true) {
+            covid19Yes = 'checked';
+            haveCov19Form = `
             <div>
                 <h1 class="blackHead">When did you have covid 19?</h1>
                 <input type="date"  value=${data[unicalEl].had_covid_at} >
             </div>
             `;
-        }
-        if (data[unicalEl].vaccinated == false) {
-          vaccinatedNo = 'checked';
-        }
-        if (data[unicalEl].vaccinated == true) {
-          vaccinatedYes = 'checked';
-          cov19VaccineForm = `
+          }
+          if (data[unicalEl].vaccinated == false) {
+            vaccinatedNo = 'checked';
+          }
+          if (data[unicalEl].vaccinated == true) {
+            vaccinatedYes = 'checked';
+            cov19VaccineForm = `
            <div>
                 <h1 class="blackHead">When did you get covid vaccine?</h1>
                 <input type="date"  value=${data[unicalEl].vaccinated_at} >
             </div>
           `;
-        }
-        if (data[unicalEl].will_organize_devtalk == false) {
-          devtalkNo = 'checked';
-        }
-        if (data[unicalEl].will_organize_devtalk == true) {
-          devtalkYes = 'checked';
-          speakDevtalkForm = `
+          }
+          if (data[unicalEl].will_organize_devtalk == false) {
+            devtalkNo = 'checked';
+          }
+          if (data[unicalEl].will_organize_devtalk == true) {
+            devtalkYes = 'checked';
+            speakDevtalkForm = `
             <div>
                 <h1 class="blackHead">What would you speak about at Devtalk?</h2>
-                <input type="text" placeholder="I would speak about subject of how to center a div">
+                <input type="text" placeholder="${data[unicalEl].devtalk_topic}">
             </div>
           `;
-        }
-        let submitForm = `
+          }
+          let submitForm = `
         <li id="deleteFormLi" class="unicalClassDiv">
             <div class="left-info">
                 <br>
                 <div class="pers-info-submit">
                     <h2 class="redFormHeader">Personal Information</h2><br>
-                    <h3>First Name  ${data[unicalEl].first_name}</h3>
-                    <h3>Last Name ${data[unicalEl].last_name}</h3>
-                    <h3>Email ${data[unicalEl].email} </h3>
-                    <h3>Phone ${data[unicalEl].phone}</h3>
+                    <h3 class="h3">First Name &nbsp; &nbsp; ${
+                      data[unicalEl].first_name
+                    }</h3>
+                    <h3 class="h3">Last Name &nbsp; &nbsp; ${
+                      data[unicalEl].last_name
+                    }</h3>
+                    <h3 class="h3">Email &nbsp; &nbsp; ${
+                      data[unicalEl].email
+                    } </h3>
+                    <h3 class="h3">Phone  &nbsp; &nbsp; ${
+                      data[unicalEl].phone
+                    }</h3>
                 </div><br>
                 <div class="covStatus-info-submit">
                     <h2 class="redFormHeader">Covid Situation</h2>
@@ -144,30 +147,31 @@ fetch(
             <div class="right-info">
                 <div><br>
                     <h1 class="redFormHeader">Skillset</h1>
-                    <h3>PHP Years of Experience: 3 </h3><br><br>
+                    <h3 class="skillclass">PHP &nbsp; &nbsp; &nbsp; &nbsp;Years of Experience: 3 </h3><br><br>
 
                     <h1 class="redFormHeader">Insigts</h1>
                     <h1 class="blackHead">Would you attend Devtalks and maybe also organize your own?</h1>
                     <input  type="radio" ${devtalkYes}>
                     <label>Yes</label><br> 
                     <input  type="radio" ${devtalkNo}>
-                    <label>No</label><br> <br>
+                    <label>No</label><br> <br> <br> <br>
                     ${
                       data[unicalEl].will_organize_devtalk
                         ? speakDevtalkForm
                         : ''
                     }<br>
                     <h1 class="blackHead">Tell us somthing special</h1>
-                    <input type="text" placeholder="I can deBUG anything!">
-
+                    <input type="text" placeholder="${someSpecialForm}">
                 </div>
             </div>
         </li>`;
-        //console.log(data[unicalEl].will_organize_devtalk);
-        unicalDiv.insertAdjacentHTML('afterend', `${submitForm}`);
-
-        //წაშლის დროს ifით შევადარებ <div> is აიდის და იმ htmlcollection რომელსცს გავაკეთებ
-        //console.log(data[unicalEl]);
+          console.log(someSpecialForm);
+          unicalDiv.insertAdjacentHTML('afterend', `${submitForm}`);
+        } else {
+          document.getElementById('deleteFormLi').remove();
+          infoImg.src = './assets/images/Vector.png';
+        }
+        deleteEl = deleteEl + 1;
       });
 
       ++infoLineId;

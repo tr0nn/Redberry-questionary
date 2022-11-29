@@ -3,6 +3,11 @@
   width: 1154px;
   height: 52px;
   margin-bottom: 21px;
+  padding-left: 27px;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  line-height: 17px;
 }
 #submitted-div {
   width: 1228px;
@@ -25,8 +30,8 @@
 .unicalClassDiv {
   background-color: white;
   list-style-type: none;
-  height: 900px;
-  width: 1152px;
+  height: 820px;
+  width: 1178px;
   margin-top: -22px;
   margin-bottom: 30px;
   border: 1px solid #fe3b1f;
@@ -56,4 +61,43 @@
   font-size: 18px;
   line-height: 22px;
   color: #000000;
+  width: 400px;
+}
+.h3 {
+  font-size: 12px;
+  font-family: 'Montserrat';
+  font-style: italic;
+  line-height: 15px;
+  color: #000000;
+}
+label {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-size: 14px;
+  color: #000000;
+  line-height: 17px;
+}
+input[type='date'] {
+  border: 1px solid #525557;
+  width: 295px;
+  height: 34px;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-size: 14px;
+  line-height: 17px;
+}
+.skillclass {
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+input[type='text'] {
+  width: 447px;
+  height: 122px;
+  border: 1px solid #525557;
+  background: #ffffff;
+  padding-left: 23px;
 }

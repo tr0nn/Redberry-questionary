@@ -1,4 +1,4 @@
-localStorage.setItem('token', 'ec778c57-0d34-47fb-add7-11dbdf357253');
+localStorage.setItem('token', '9159d670-97b6-4c18-a382-4c607c7a7096');
 
 let tokenLS = localStorage.getItem('token');
 let firstNameLS = localStorage.getItem('firstName');
