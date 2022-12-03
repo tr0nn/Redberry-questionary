@@ -29,7 +29,7 @@ fetch(
 
       //addEventListener
       let infoEl = document.getElementById('infoBtnId-' + infoLineId);
-      infoEl.addEventListener('click', () => {
+      infoLine.addEventListener('click', () => {
         if (deleteEl % 2 == 0) {
           infoImg.src = './assets/images/VectorDown.png';
 

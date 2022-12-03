@@ -21,7 +21,7 @@ function DeleteSkill(Id) {
 }
 
 function skillBtnFunc(idx) {
-  return `<button onclick="DeleteSkill(${idx})" id="skill-delete-btn" type="button"><img src="./assets/images/Remove.png"></button>`;
+  return `<button class='skillDeleteBtn' onclick="DeleteSkill(${idx})" id="skill-delete-btn" type="button"><img src="./assets/images/Remove.png"></button>`;
 }
 
 function addProgLang() {
